@@ -1,0 +1,14 @@
+spring:
+  main:
+    web-application-type: NONE
+  datasource:
+    url: jdbc:mysql://localhost:3306/distributed_lock
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: localhost
+    port: 6379
+distributed-lock:
+  enabled: true
+  lock-type: redis
