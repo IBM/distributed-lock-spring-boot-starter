@@ -43,7 +43,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 distributed-lock:
   enabled: true
-  lock-type: redis
+  lock-type: db
 ```
 
 if you are using redis version, config application.yml is all you need to do.
