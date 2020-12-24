@@ -14,7 +14,7 @@ This distributed reentrant lock currently provides two implementions--db and red
 
 ```gradle
 dependencies {
-  compile('com.ibm.esw:distributed-lock-spring-boot-starter:1.0.2-beta')
+  compile('com.ibm.esw:distributed-lock-spring-boot-starter:0.0.1-SNAPSHOT')
 }
 ```
 
