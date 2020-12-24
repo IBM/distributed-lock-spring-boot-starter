@@ -7,12 +7,19 @@ buildscript {
 apply plugin: "maven-publish"
 
 publishing {
+    repositories {
+        maven {
+            name = "distributed-lock-spring-boot-starter"
+            url = uri("https://maven.pkg.github.com/IBM/distributed-lock-spring-boot-starter")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+            }
+        }
+    }
     publications {
-        maven(MavenPublication) {
-            groupId "com.ibm.esw"
-            version = "1.0.2-beta"
-            artifactId = "distributed-lock-spring-boot-starter"
-            from components.java
+        gpr(MavenPublication) {
+            from(components.java)
         }
     }
 }
